@@ -1,0 +1,39 @@
+<Project>
+
+    <PropertyGroup>
+        <RootNamespace>Vurdalakov.Rtty</RootNamespace>
+        <WarningLevel>4</WarningLevel>
+        <Deterministic>false</Deterministic>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <PublishSingleFile>true</PublishSingleFile>
+        <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Product>Internet Teletype Europe Receiver</Product>
+        <AssemblyVersion>0.1</AssemblyVersion>
+        <AssemblyFileVersion>$(AssemblyVersion)</AssemblyFileVersion>
+        <Company>Vurdalakov</Company>
+        <Authors>$(Company)</Authors>
+        <Copyright>Copyright (c) 2025 $(Company). All rights reserved.</Copyright>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <BaseIntermediateOutputPath>$(SolutionDir)..\obj\projects\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+        <BaseOutputPath>$(SolutionDir)..\bin\</BaseOutputPath>
+        <OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
+    </PropertyGroup>
+
+    <Choose>
+        <When Condition="'$(MSBuildProjectExtension)'=='.csproj'">
+            <ItemGroup>
+                <PackageReference Include="StyleCop.Analyzers" Version="*-*" />
+                <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.*" />
+            </ItemGroup>
+        </When>
+    </Choose>
+
+</Project>
