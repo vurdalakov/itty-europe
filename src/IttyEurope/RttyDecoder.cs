@@ -1,3 +1,10 @@
+// IttyEurope
+// A small experimental program that receives and decodes the Europe News RTTY channel from the Internet Teletype.
+// https://github.com/vurdalakov/itty-europe
+//
+// Copyright (c) 2025 Vurdalakov. All rights reserved.
+// Distributed under the terms of the MIT License.
+
 namespace Vurdalakov.Rtty
 {
     using System;

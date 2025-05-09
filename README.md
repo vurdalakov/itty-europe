@@ -1,4 +1,4 @@
-# IttyEurope - Internet Teletype Europe Receiver
+# IttyEurope - Internet Teletype Europe News Receiver
 
 [IttyEurope](https://github.com/vurdalakov/itty-europe) is a small experimental program written in C# and .NET 8 that receives and decodes
 Europe News RTTY channel of the [Internet Teletype](https://www.rtty.com/itty/index.htm).

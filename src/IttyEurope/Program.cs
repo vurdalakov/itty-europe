@@ -1,6 +1,14 @@
-﻿namespace Vurdalakov.Rtty
+﻿// IttyEurope
+// A small experimental program that receives and decodes the Europe News RTTY channel from the Internet Teletype.
+// https://github.com/vurdalakov/itty-europe
+//
+// Copyright (c) 2025 Vurdalakov. All rights reserved.
+// Distributed under the terms of the MIT License.
+
+namespace Vurdalakov.Rtty
 {
     using System;
+    using System.Diagnostics;
     using System.IO;
 
     using NAudio.Wave;
@@ -9,6 +17,18 @@
     {
         public static void Main(String[] args)
         {
+            Console.WriteLine();
+            try
+            {
+                var versionInfo = FileVersionInfo.GetVersionInfo(Environment.ProcessPath);
+                Console.WriteLine($"{versionInfo.ProductName} v{versionInfo.ProductMajorPart}.{versionInfo.ProductMinorPart}");
+            }
+            catch
+            {
+            }
+            Console.WriteLine("https://github.com/vurdalakov/itty-europe");
+            Console.WriteLine();
+
             var url = 1 == args.Length ? args[0] : "http://internet-tty.net:8040/EUROPE";
             Console.WriteLine($"URL: '{url}'");
 
@@ -39,8 +59,10 @@
             wasapiOut.Init(mediaFoundationReader);
             wasapiOut.Play();
 
+            Console.WriteLine();
             Console.WriteLine("Press any key to exit...");
             Console.WriteLine();
+
             Console.ReadKey(true);
 
             wasapiOut.Stop();

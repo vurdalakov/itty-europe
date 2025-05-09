@@ -1,7 +1,6 @@
 <Project>
 
     <PropertyGroup>
-        <RootNamespace>Vurdalakov.Rtty</RootNamespace>
         <WarningLevel>4</WarningLevel>
         <Deterministic>false</Deterministic>
         <Nullable>disable</Nullable>
@@ -9,15 +8,6 @@
         <PublishSingleFile>true</PublishSingleFile>
         <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
         <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <Product>Internet Teletype Europe Receiver</Product>
-        <AssemblyVersion>0.1</AssemblyVersion>
-        <AssemblyFileVersion>$(AssemblyVersion)</AssemblyFileVersion>
-        <Company>Vurdalakov</Company>
-        <Authors>$(Company)</Authors>
-        <Copyright>Copyright (c) 2025 $(Company). All rights reserved.</Copyright>
     </PropertyGroup>
 
     <PropertyGroup>
